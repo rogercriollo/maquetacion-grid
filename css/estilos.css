@@ -1,0 +1,77 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif
+}
+
+body{
+    background-color: #48e;
+}
+
+
+.grid-container{
+    background-color:#ccc;
+    max-width: 1124px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 10px;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "contenido contenido sidevar"
+                         "noticia1 noticia2 sidevar"
+                         "footer footer footer";
+}
+
+.grid-container .cabeceraPrincipal{
+    grid-area: header;
+    background-color: rgb(97, 65, 254);
+}
+.grid-container .menuPrincipal{
+	grid-area: nav;
+	background-color: #333;
+}
+.grid-container .contenido{
+	grid-area: contenido;
+	background-color: #333;
+
+}
+.grid-container .sidebar{
+	grid-area: sidevar;
+	background-color: #333;
+}
+.grid-container .noticia1{
+	grid-area: noticia1;
+	background-color: #333;
+}
+.grid-container .noticia2{
+	grid-area: noticia2;
+	background-color: #333;
+}
+
+.grid-container .piePagina{
+	grid-area: footer;
+	background-color: #333;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: red;
+  }
+  .grid-container{
+  	    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+      grid-template-areas: "header header "
+                         "nav nav "
+                         "contenido contenido "
+                         "noticia1 noticia2 "
+                         "sidevar sidevar"
+                         "footer footer ";
+  }
+
+}
